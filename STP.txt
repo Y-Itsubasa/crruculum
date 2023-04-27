@@ -7,22 +7,14 @@ A.switch３
 （問２）ポートの役割と理由を答えろ
 Switch3ルートブリッジなのでE0/1、E0/2はDP(指定ポート）
 
-switch1から3、３から4、４から２のショートパスコストは100
-switch1から2のショートパスコストは19
+Switch２−1−3とSwitch2−4−1はコスト的に2−1−3が小さいので
+Switch2のF0/1がRP
 
-Switch３−1−2は合計１１９
-Switch3-4−2は合計200
+ Switch１F0/1は Switch２のF0/1の対向なのでDP
 
-ポートパスコストが小さいので
-Switch1のF0/2はRP(ルートポート）、
-対向は指定ポートなので
-F0/1はDP(指定ポート）
+上記と同様に
+ Switch１のF0/2はRP
 
-上記の理由から
-Switch2のF0/1はRP(ルートポート）
-F0/2はDP(指定ポート）
-
-Switch4のE0/2はBP(ブロッキングポート)
-Switchは必ず1つRPを持つので
-E0/1はRP(ルートポート）
-
+ Switch3−1−2と Switch3−4ではコスト的に3−1−2の方が大きいので
+ Switch２のF0／2はBPで
+ Switch４E0/2はRPでE0/1はDP
